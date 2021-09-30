@@ -2,9 +2,19 @@
   "name": "@1mill/mongo",
   "version": "0.0.0",
   "description": "Cache MongoDB connections across AWS Lambda invokations",
-  "main": "index.js",
+  "source": "src/index.js",
+  "jsnext:main": "dist/index.module.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "umd:main": "dist/index.umd.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf ./dist && microbundle --entry ./src/*.js",
+    "deploy": "npm run build && npm publish",
+    "dev": "microbundle watch"
   },
   "repository": {
     "type": "git",
