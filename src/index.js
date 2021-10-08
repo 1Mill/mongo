@@ -8,7 +8,7 @@ class Mongo {
 		uri = fetchNodeEnv('MILL_MONGO_URI'),
 	}) {
 		// * Inputs
-		this.dbName = db
+		this.db = db
 		this.options = options
 		this.uri = uri
 
@@ -16,6 +16,7 @@ class Mongo {
 		this.clientPromise = undefined
 	}
 
+	// * https://docs.atlas.mongodb.com/best-practices-connecting-from-aws-lambda/
 	async connect() {
 		if (typeof this.clientPromise === 'undefined') {
 			this.clientPromise = new MongoClient(this.uri, {
@@ -26,7 +27,7 @@ class Mongo {
 		}
 
 		const client = await this.clientPromise
-		const db = client.db(this.dbName)
+		const db = client.db(this.db)
 
 		return { client, db }
 	}
