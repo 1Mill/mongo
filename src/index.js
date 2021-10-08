@@ -14,7 +14,6 @@ class Mongo {
 
 		// * State management
 		this.client = undefined
-		this.db = undefined
 	}
 
 	async connect() {
@@ -26,11 +25,8 @@ class Mongo {
 			}).connect()
 		}
 
-		if (typeof this.db === 'undefined') {
-			this.db = this.client.db(this.dbName)
-		}
-
-		return { client: this.client, db: this.db }
+		const db = this.client.db(this.dbName)
+		return { client: this.client, db }
 	}
 }
 
