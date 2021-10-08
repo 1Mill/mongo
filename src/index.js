@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb')
-const { fetchNodeEnv } = require('./fetchNodeEnv')
+
+const fetchNodeEnv = name => process && process.env && process.env[name]
 
 class Mongo {
 	constructor({
