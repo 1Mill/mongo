@@ -8,29 +8,29 @@ class Mongo {
 		uri = fetchNodeEnv('MILL_MONGO_URI'),
 	}) {
 		// * Inputs
-		this._dbName = db
-		this._options = options
-		this._uri = uri
+		this.dbName = db
+		this.options = options
+		this.uri = uri
 
 		// * State management
-		this._client = undefined
-		this._db = undefined
+		this.client = undefined
+		this.db = undefined
 	}
 
 	async connect() {
-		if (typeof this._client === 'undefined') {
-			this._client = await new MongoClient(this._uri, {
+		if (typeof this.client === 'undefined') {
+			this.client = await new MongoClient(this.uri, {
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
-				...this._options,
+				...this.options,
 			}).connect()
 		}
 
-		if (typeof this._db === 'undefined') {
-			this._db = this._client.db(this._dbName)
+		if (typeof this.db === 'undefined') {
+			this.db = this.client.db(this.dbName)
 		}
 
-		return { client: this._client, db: this._db }
+		return { client: this.client, db: this.db }
 	}
 }
 
