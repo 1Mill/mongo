@@ -10,8 +10,12 @@ class Mongo {
 	}) {
 		// * Inputs
 		this.db = db
+		if (!this.db) throw new Error('Mongo "db" is required')
+
 		this.options = options
+
 		this.uri = uri
+		if (!this.uri) throw new Error('Mongo "uri" is required')
 
 		// * State management
 		this.clientPromise = undefined

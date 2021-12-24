@@ -36,6 +36,6 @@
     "microbundle": "^0.13.3"
   },
   "dependencies": {
-    "mongodb": "^4.1.2"
+    "mongodb": "^4.2.2"
   }
 }
