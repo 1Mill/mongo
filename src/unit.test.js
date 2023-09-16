@@ -4,7 +4,7 @@ const main = async () => {
 	console.log('starting ...')
 	const mongo = new Mongo({
 		db: 'test-npm-mongo-db',
-		uri: 'mongodb://root:password@mongo-able:27017/',
+		uri: 'mongodb://root:password@mongo:27017/',
 	})
 
 	const promises = [...Array(1_000)].map(async (_, i) => {
@@ -14,9 +14,9 @@ const main = async () => {
 
 			await collection.insertOne({
 				id: i,
-				time: new Date().toISOString(),
 				source: 'test',
-				type: 'exmaple',
+				time: new Date().toISOString(),
+				type: 'example',
 			})
 			console.log(`Finished: ${i}`)
 		} catch (err) {

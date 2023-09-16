@@ -12,9 +12,12 @@
     "src"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && microbundle",
+    "build": "rm -rf ./dist && npm run build:browser && npm run build:node",
+    "build:browser": "microbundle --format modern,umd --external none",
+    "build:node": "microbundle --format cjs,esm",
     "deploy": "npm run build && npm publish",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "node ./src/unit.test.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,7 @@
   },
   "homepage": "https://github.com/1mill/mongo#readme",
   "devDependencies": {
-    "microbundle": "^0.13.3"
+    "microbundle": "^0.15.1"
   },
   "dependencies": {
     "mongodb": "^4.2.2"
