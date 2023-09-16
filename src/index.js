@@ -1,8 +1,8 @@
-const { MongoClient } = require('mongodb')
+import { MongoClient } from 'mongodb'
 
 const fetchNodeEnv = name => process && process.env && process.env[name]
 
-class Mongo {
+export class Mongo {
 	constructor({
 		db = fetchNodeEnv('MILL_MONGO_DB'),
 		options = {},
@@ -37,5 +37,3 @@ class Mongo {
 		return { client, db }
 	}
 }
-
-module.exports = { Mongo }

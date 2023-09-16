@@ -1,4 +1,4 @@
-const { Mongo } = require('./index')
+import { Mongo } from './index.js'
 
 const main = async () => {
 	console.log('starting ...')
