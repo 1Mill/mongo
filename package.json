@@ -1,6 +1,6 @@
 {
   "name": "@1mill/mongo",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Cache MongoDB connections across AWS Lambda invokations",
   "source": "src/index.js",
   "type": "module",
