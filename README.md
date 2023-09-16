@@ -1,6 +1,6 @@
 # @1mill/mongo
 
-Cache MongoDB connections across lambda invocations
+Reuse MongoDB connections between AWS Lambda invocations.
 
 ```bash
 npm install @1mill/mongo
