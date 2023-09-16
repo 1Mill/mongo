@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.1
+
+* Update package description
+
 ## v0.3.0
 
 * Set `"type"` to `"module"` in `package.json` which changes how the package is bundled and may be a breaking change.
