@@ -1,6 +1,6 @@
 # @1mill/mongo
 
-Cache MongoDB connections across lambda invokations
+Cache MongoDB connections across lambda invocations
 
 ```bash
 npm install @1mill/mongo
