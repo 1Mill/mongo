@@ -7,11 +7,6 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
-  "exports": {
-    "default": "./dist/index.modern.js",
-    "import": "./dist/index.module.js",
-    "require": "./dist/index.cjs"
-  },
   "files": [
     "dist",
     "src"

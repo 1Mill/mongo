@@ -1,8 +1,12 @@
 # Changelog
 
+## v0.3.4
+
+* Remove `exports` from `package.json` completely
+
 ## v0.3.3
 
-* Add `import` path to `exports`
+* Add `import` path to `exports` in `package.json`
 
 ## v0.3.2
 
