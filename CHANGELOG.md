@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.2
+
+* Fix build export paths
+
 ## v0.3.1
 
 * Update package description

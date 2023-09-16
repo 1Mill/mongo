@@ -4,10 +4,13 @@
   "description": "Reuse MongoDB connections between AWS Lambda invocations.",
   "source": "src/index.js",
   "type": "module",
-  "jsnext:main": "dist/index.module.js",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "umd:main": "dist/index.umd.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
   "files": [
     "dist",
     "src"
