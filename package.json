@@ -8,8 +8,9 @@
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
+    "default": "./dist/index.modern.js",
+    "import": "./dist/index.module.js",
+    "require": "./dist/index.cjs"
   },
   "files": [
     "dist",

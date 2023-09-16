@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.3
+
+* Add `import` path to `exports`
+
 ## v0.3.2
 
 * Fix build export paths
