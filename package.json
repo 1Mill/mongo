@@ -1,6 +1,6 @@
 {
   "name": "@1mill/mongo",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Reuse MongoDB connections between AWS Lambda invocations.",
   "source": "src/index.js",
   "type": "module",
